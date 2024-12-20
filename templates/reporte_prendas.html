@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='estilos.css') }}">
+    <title>Inventario Prendas</title>
+</head>
+<body>
+    <h1>Inventario Prendas</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Categoría</th>
+                <th>Precio</th>
+                <th>Stock</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for prenda in prendas %}
+            <tr>
+                <td>{{ prenda.id }}</td>
+                <td>{{ prenda.nombre }}</td>
+                <td>{{ prenda.categoría }}</td>
+                <td>${{ prenda.precio }}</td>
+                <td>{{ prenda.stock }}</td>
+                <td>
+                    <!-- Botón para eliminar -->
+                    <form action="{{ url_for('delete_item', id_unico=prenda.id) }}" method="POST" style="display:inline;">
+                        <button type="submit" class="btn-eliminar">Eliminar</button>
+                    </form>
+                    <!-- Botón para editar -->
+                    <form action="{{ url_for('edit_item', id_unico=prenda.id) }}" method="GET" style="display:inline;">
+                        <button type="submit" class="btn-editar">Editar</button>
+                    </form>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <div style="text-align: center; margin-top: 20px;">
+        <button onclick="window.location.href='{{ url_for('index') }}';" class="btn-agregar">Agregar Prendas</button>
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

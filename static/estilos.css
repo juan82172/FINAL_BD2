@@ -1,0 +1,55 @@
+body {
+    background-image: url('/static/images/prendas.jpg');
+
+    background-size: cover;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 20px;
+    color: #ffffff;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+table {
+    width: 90%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background-color: rgba(255, 255, 255, 0.8);
+    color: black;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+th, td {
+    border: 1px solid #8b60b8;
+    padding: 10px;
+    text-align: center;
+}
+
+th {
+    background-color: #6a4a8b;
+    color: white;
+}
+
+.btn-agregar, .btn-editar, .btn-eliminar, .btn-volver {
+    display: block;
+    width: 200px;
+    margin: 10px auto;
+    padding: 10px;
+    background-color: #8b60b8;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+}
+
+.btn-agregar:hover, .btn-editar:hover, .btn-eliminar:hover, .btn-volver:hover {
+    background-color: #6a4a8b;
+}

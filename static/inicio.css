@@ -1,0 +1,75 @@
+/* inicio.css */
+body {
+    background-image: url('/static/images/tiendappal.png');
+    background-size: cover;
+    background-attachment: fixed;
+    color: white;
+    font-family: 'Arial', sans-serif; /* Tipo de letra predeterminado */
+    text-align: center; /* Alinear el texto al centro en el cuerpo */
+}
+
+h1 {
+    color: #fff;
+    font-size: 2.5em;
+    margin-top: 20px;
+}
+
+.container {
+    max-width: 600px;
+    margin: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.form-group input, .form-group select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: 'Arial', sans-serif; /* Tipo de letra uniforme */
+}
+
+.form-group button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #8b60b8;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1em; /* Tamaño de letra uniforme */
+    font-family: 'Arial', sans-serif; /* Tipo de letra uniforme */
+}
+
+.form-group button:hover {
+    background-color: #6a4a8b;
+}
+
+.btn-lista {
+    display: block;
+    margin: 10px auto;
+    padding: 10px;
+    background-color: #8b60b8;
+    color: white;
+    text-align: center;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1.1em; /* Tamaño de letra uniforme */
+    font-family: 'Arial', sans-serif; /* Tipo de letra uniforme */
+}
+
+.btn-lista:hover {
+    background-color: #6a4a8b;
+}

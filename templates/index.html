@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agregar Producto - Tienda de Ropa</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='inicio.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Fashion Line</h1>
+
+        <form action="{{ url_for('add_item') }}" method="POST">
+            <div class="form-group">
+                <label for="id">ID: (4 dígitos)</label>
+                <input type="text" id="id" name="id" required pattern="\d{4}" title="Debe ser un número de 4 dígitos">
+            </div>
+            <div class="form-group">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
+            </div>
+            <div class="form-group">
+                <label for="precio">Precio:</label>
+                <input type="number" id="precio" name="precio" required step="0.01">
+            </div>
+            <div class="form-group">
+                <label for="categoría">Categoría:</label>
+                <select id="categoría" name="categoría">
+                    <option value="Ropa De Verano">Ropa De Verano</option>
+                    <option value="Ropa Deportiva">Ropa Deportiva</option>
+                    <option value="Ropa De Invierno">Ropa De Invierno</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="stock">Stock:</label>
+                <input type="number" id="stock" name="stock" required>
+            </div>
+            <div class="form-group">
+                <button type="submit">Agregar Producto</button>
+            </div>
+        </form>
+
+        <div style="text-align: center; margin-top: 20px;">
+            <a href="{{ url_for('reporte_prendas') }}" class="btn-lista">Lista de Productos</a>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
